@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-width: 320px;
 }
 
 .feedback-form p {
-  width: 327px;
+  width: 100%;
   margin-top: 13px;
   font-weight: 600;
   font-size: 17px;
@@ -14,17 +15,22 @@
   text-align: center;
 }
 
+.feedback-form form {
+  width: 100%;
+}
+
 .feedback-form__list {
   @include reset-list-style;
 }
 
 .feedback-form__list input {
-  width: 327px;
+  width: 100%;
   min-height: 48px;
   margin-bottom: 20px;
   padding-left: 27px;
   padding-top: 8px;
   letter-spacing: 0.3px;
+  border: 1px solid #c9ccd4;
   border-radius: 5px;
 }
 
@@ -40,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 326px;
+  width: 100%;
   min-height: 54px;
   font-weight: 600;
   font-size: 15px;
@@ -54,10 +60,44 @@
   }
 }
 
-// @media (max-width: $tablet-max-width) {
+@media (max-width: $tablet-max-width) {
+  .feedback-form {
+    margin: 0 auto;
+    margin-top: 57px;
+    width: 321px;
+  }
 
-// }
+  .feedback-form p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $font-black-color;
+  }
 
-// @media (max-width: $mobile-max-width) {
+  .feedback-form__list input {
+    padding-left: 20px;
+    padding-top: 4px;
+  }
+}
 
-// }
+@media (max-width: $mobile-max-width) {
+  .feedback-form {
+    width: 288px;
+    min-width: 0;
+  }
+
+  .feedback-form p {
+    width: auto;
+    margin-left: -5px;
+    margin-bottom: 20px;
+  }
+
+  .feedback-form__list input {
+    padding-left: 23px;
+    padding-top: 4px;
+  }
+
+  .feedback-form__button {
+    padding-bottom: 7px;
+    padding-left: 0;
+  }
+}

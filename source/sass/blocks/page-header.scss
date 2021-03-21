@@ -1,10 +1,10 @@
 .page-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 11.11%;
+  grid-template-columns: 393px 327px;
+  grid-column-gap: 11vw;
   grid-row-gap: 249px;
-  padding-left: 19.8%;
-  padding-right: 18.5%;
+  min-width: 720px;
+  padding-left: calc(48% - 402px);
   padding-bottom: 220px;
   color: $font-white;
   background-color: #202020;
@@ -38,16 +38,17 @@
   font-size: 16px;
   line-height: 20px;
   opacity: 0.7;
-}
 
-.page-header__site-menu-item a:hover,
-.page-header__site-menu-item a:focus {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 .page-header__description {
   display: flex;
   flex-direction: column;
+  min-width: 345px;
   padding-top: 7px;
 }
 
@@ -75,15 +76,168 @@
 }
 
 @media (max-width: $tablet-max-width) {
+  .page-header {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    color: $font-white;
+    background-color: transparent;
+    background-image: none;
+  }
+
   .page-header__main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    grid-column: 1;
+    width: 100%;
+    border-bottom: none;
+    background-color: #ffffff;
+  }
+
+  .page-header__site-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    padding: 0;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    color: $font-mobile-menu;
+  }
+
+  .page-header__site-menu-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 28px;
+    background-color: $background-mobile-menu-item;
+
+    &::after {
+      @include pseudo-clases;
+      width: 25px;
+      height: 25px;
+      top: 17px;
+      right: 16px;
+      background-image: url("../img/icon-arrow-right.svg");
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  .page-header__site-menu-item a {
+    padding: 17px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    opacity: 1;
+  }
+
+  .page-header__main-nav--closed .page-header__site-menu {
+    display: none;
+  }
+
+  .page-header__main-nav-toggle {
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    padding: 0;
+    font-family: inherit;
+    background-color: #ffffff;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    border: none;
+  }
+
+  .page-header__main-nav--closed .page-header__main-nav-toggle {
+    background-color: $accent-main-color;
+    background-image: url("../img/icon-hamburger.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10px 11px;
+    background-size: 60%;
+  }
+
+  .page-header__main-nav--nojs {
+    position: relative;
+  }
+
+  .page-header__main-nav--nojs .page-header__main-nav-toggle {
     display: none;
   }
 
   .page-header h2 {
     margin: 0;
   }
+
+  .page-header__description {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 80px;
+    background-color: #272727;
+    background-image: url("../img/bicycle-selection-background@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% -50px;
+    background-size: 100%;
+  }
+
+  .page-header__logo {
+    margin-top: 25px;
+    margin-left: 21px;
+  }
+
+  .page-header__description h2 {
+    width: 525px;
+    margin: 0 auto;
+    margin-top: 85px;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .page-header__description p {
+    width: 435px;
+    margin: 0 auto;
+    margin-top: 18px;
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
-// @media (max-width: $mobile-max-width) {
+@media (max-width: $mobile-max-width) {
+  .page-header {
+    min-width: 0;
+  }
 
-// }
+  .page-header__description {
+    min-width: 0;
+    padding-bottom: 70px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: -117px 37px;
+    background-size: 172%;
+  }
+
+  .page-header__description h2 {
+    margin-top: 71px;
+    width: 288px;
+  }
+
+  .page-header__description p {
+    width: 288px;
+  }
+
+  .page-header__logo {
+    margin-left: 16px;
+  }
+}

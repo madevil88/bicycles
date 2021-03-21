@@ -39,17 +39,18 @@
     <article class="page-header__description">
       <h2>Мы продаем велосипеды</h2>
       <a class="page-header__logo">
-        <img width="67.5" height="20.5" src="img/logo.svg" alt="Логотип интернет-магазина">
+        <img width="67" height="20" src="img/logo.svg" alt="Логотип интернет-магазина">
       </a>
       <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
     </article>
     <article class="page-header__form feedback-form">
+      <h2 class="visually-hidden">Форма для связи</h2>
       <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
       <form action="https://echo.htmlacademy.ru" method="get">
         <ul class="feedback-form__list">
-          <li class="feedback-form__item">
+          <li class="feedback-form__item ">
             <label class="visually-hidden" for="username">Имя</label>
-            <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" pattern="[a-z]" required="">
+            <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" pattern="^[a-zA-Z]+$" required="">
           </li>
           <li class="feedback-form__item">
             <label class="visually-hidden" for="phone">Телефон</label>
@@ -65,11 +66,11 @@
     <section class="about-us" id="about-us">
       <h3>Несколько фактов о нас</h3>
       <ul class="about-us__list">
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--first">
           <span>01</span>
           <p>Самый широкий выбор велосипедов!</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--second">
           <span>02</span>
           <p>Доставка велосипедов по всей России!</p>
         </li>
@@ -87,15 +88,30 @@
       <h3>Виды велосипедов</h3>
       <ul class="types-of-bicycles__list">
         <li class="types-of-bicycles__item">
-          <img width="342" height="503" src="img/road-bicycle@1x.jpg" alt="Дорожный велосипед">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/road-bicycle-tablet@1x.webp 1x, img/road-bicycle-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/road-bicycle@1x.webp 1x, img/road-bicycle@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/road-bicycle-tablet@1x.jpg 1x, img/road-bicycle-tablet@2x.jpg 2x">
+            <img width="342" height="503" src="img/road-bicycle@1x.jpg" srcset="img/road-bicycle@2x.jpg 2x" alt="Дорожный велосипед">
+          </picture>
           <span>Дорожный велосипед</span>
         </li>
         <li class="types-of-bicycles__item">
-          <img width="342" height="566" src="img/mountain-bicycle@1x.jpg" alt="Горный велосипед">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bicycle-tablet@1x.webp 1x, img/mountain-bicycle-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/mountain-bicycle@1x.webp 1x, img/mountain-bicycle@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/mountain-bicycle-tablet@1x.jpg 1x, img/mountain-bicycle-tablet@2x.jpg 2x">
+            <img width="342" height="566" src="img/mountain-bicycle@1x.jpg" srcset="img/mountain-bicycle@2x.jpg 2x" alt="Горный велосипед">
+          </picture>
           <span>Горный велосипед</span>
         </li>
         <li class="types-of-bicycles__item">
-          <img width="342" height="513" src="img/children-bicycle@1x.jpg" alt="Детский велосипед">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/children-bicycle-tablet@1x.webp 1x, img/children-bicycle-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/children-bicycle@1x.webp 1x, img/children-bicycle@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/children-bicycle-tablet@1x.jpg 1x, img/children-bicycle-tablet@2x.jpg 2x">
+            <img width="342" height="513" src="img/children-bicycle@1x.jpg" srcset="img/children-bicycle@2x.jpg 2x" alt="Детский велосипед">
+          </picture>
           <span>Детский велосипед</span>
         </li>
       </ul>
@@ -103,8 +119,11 @@
     <article class="video-about-bicycles" id="video-about-bicycles">
       <h3>Видео про велосипеды</h3>
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-      <img width="929" height="522" src="img/video-poster@1x.jpg" alt="Постер видео про велосипеды">
-      <button type="button">
+      <picture>
+        <source type="image/webp" srcset="img/video-poster@1x.webp 1x, img/video-poster@2x.webp 2x">
+        <img width="929" height="522" src="img/video-poster@1x.jpg" srcset="img/video-poster@2x.jpg 2x" alt="Постер видео про велосипеды">
+      </picture>
+      <button class="video-about-bicycles__button" type="button">
         <span class="visually-hidden">Play</span>
       </button>
     </article>
@@ -113,7 +132,12 @@
     <section class="contacts" id="contacts">
       <h3>Как нас найти?</h3>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      <img width="957" height="530" src="img/map@1x.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+      <picture>
+        <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
+        <source media="(max-width: 1023px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+        <img width="957" height="530" src="img/map@1x.png" srcset="img/map@2x.png 2x" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+      </picture>
       <div class="contacts__info">
         <a href="mailto:puteshestviemechta@gmail.ru">
           puteshestviemechta@gmail.ru
