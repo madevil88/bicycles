@@ -6,6 +6,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^5.1.0",
+    "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",

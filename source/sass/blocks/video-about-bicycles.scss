@@ -1,8 +1,8 @@
 .video-about-bicycles {
   position: relative;
   display: grid;
-  grid-template-columns: 64.4vw;
-  padding: 0 calc(34.4vw / 2);
+  grid-template-columns: 64.5vw;
+  padding: 0 calc(35vw / 2);
   color: $font-white;
   background: linear-gradient(to bottom, #131314 88%, transparent 88%);
 }
@@ -29,7 +29,7 @@
 }
 
 .video-about-bicycles img {
-  width: 64.4vw;
+  width: 65vw;
   margin-top: 55px;
   margin-left: 8px;
 }
@@ -66,6 +66,13 @@
   background-position: 26px 21px;
   background-size: 23%;
 }
+/*стили для FireFox*/
+@supports (-moz-appearance:meterbar) {
+  .video-about-bicycles {
+    padding: 0 calc(35.4vw / 2);
+  }
+}
+/*конец стилей для FireFox*/
 
 @media (max-width: $tablet-max-width) {
   .video-about-bicycles {
@@ -102,6 +109,13 @@
     background-position: 38px 31px;
   }
 }
+/*стили для FireFox*/
+@supports (-moz-appearance:meterbar) {
+  .video-about-bicycles {
+    padding: 0 calc(34.4vw / 2);
+  }
+}
+/*конец стилей для FireFox*/
 
 @media (max-width: $mobile-max-width) {
   .video-about-bicycles {

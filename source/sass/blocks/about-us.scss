@@ -96,11 +96,11 @@
     font-size: 18px;
   }
 
-  .about-us__item--first p {
+  .about-us__item:first-child p {
     padding-top: 9px;
   }
 
-  .about-us__item--second {
+  .about-us__item:nth-child(4n - 2) {
     margin-top: -7px;
   }
 }

@@ -12,6 +12,10 @@
   background-repeat: no-repeat, no-repeat;
   background-position: 0% 0%;
   background-size: 101%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bicycle-selection-background@2x.jpg");
+  }
 }
 
 .page-header__main-nav {
@@ -190,6 +194,10 @@
     background-repeat: no-repeat, no-repeat;
     background-position: 0% -50px;
     background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bicycle-selection-background@2x.jpg");
+    }
   }
 
   .page-header__logo {

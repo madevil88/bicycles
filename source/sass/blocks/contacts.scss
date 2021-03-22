@@ -1,13 +1,13 @@
 .contacts {
   display: grid;
   grid-template-columns: 67.2vw;
-  margin-top: 147px;
-  padding: 0 calc(33.5vw / 2);
+  margin-top: 150px;
+  padding: 0 calc(34vw / 2);
   padding-bottom: 95px;
 }
 
 .contacts h3 {
-  margin: 0 calc(50% - 288px);
+  margin: 0 calc(50% - 287px);
   width: 555px;
   font-weight: 600;
   font-size: 30px;
@@ -17,7 +17,7 @@
 }
 
 .contacts p {
-  margin: 0 calc(50% - 288px);
+  margin: 0 calc(50% - 290px);
   margin-top: 30px;
   width: 555px;
   font-weight: normal;
@@ -79,6 +79,15 @@
   background-position: 0 0;
   background-size: 50%;
 }
+/*стили для FireFox*/
+@supports (-moz-appearance:meterbar) {
+  .contacts {
+    grid-template-columns: 68vw;
+    margin-top: 153px;
+    padding: 0 calc(34vw / 2);
+  }
+}
+/*конец стилей для FireFox*/
 
 @media (max-width: $tablet-max-width) {
   .contacts {

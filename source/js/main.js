@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const navMain = document.querySelector(`.page-header__main-nav`);
+  const navMain = document.querySelector('.page-header__main-nav');
   const navToggle = document.querySelector('.page-header__main-nav-toggle');
 
   if (navMain && navToggle) {

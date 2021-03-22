@@ -60,6 +60,15 @@
   }
 }
 
+/*стили для FireFox*/
+@supports (-moz-appearance:meterbar) {
+  .feedback-form__list input {
+    padding-left: 30px;
+    padding-top: 14px;
+  }
+}
+/*конец стилей для FireFox*/
+
 @media (max-width: $tablet-max-width) {
   .feedback-form {
     margin: 0 auto;
@@ -77,7 +86,16 @@
     padding-left: 20px;
     padding-top: 4px;
   }
+  /*стили для FireFox*/
+  @supports (-moz-appearance:meterbar) {
+    .feedback-form__list input {
+      padding-left: 21px;
+      padding-top: 11px;
+    }
+  }
+  /*конец стилей для FireFox*/
 }
+
 
 @media (max-width: $mobile-max-width) {
   .feedback-form {
@@ -100,4 +118,17 @@
     padding-bottom: 7px;
     padding-left: 0;
   }
+  /*стили для FireFox*/
+  @supports (-moz-appearance:meterbar) {
+    .feedback-form__list input {
+      padding-top: 11px;
+      padding-left: 25px;
+    }
+
+    .feedback-form__button {
+      padding-left: 6px;
+      letter-spacing: -0.2px;
+    }
+  }
+  /*конец стилей для FireFox*/
 }
