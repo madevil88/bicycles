@@ -48,17 +48,17 @@
       <h2 class="visually-hidden">Форма для связи</h2>
       <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <ul class="feedback-form__list">
-          <li class="feedback-form__item ">
-            <label class="visually-hidden" for="username">Имя</label>
+        <ul>
+          <li>
+            <label for="username">Имя</label>
             <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" pattern="^[a-zA-Z]+$" required="">
           </li>
-          <li class="feedback-form__item">
-            <label class="visually-hidden" for="phone">Телефон</label>
+          <li>
+            <label for="phone">Телефон</label>
             <input type="tel" id="phone" name="phone" pattern="\+7[0-9]{10}" placeholder="Введите Ваш номер телефона" required="">
           </li>
         </ul>
-        <button class="feedback-form__button" type="submit">Подобрать велосипед мечты</button>
+        <button type="submit">Подобрать велосипед мечты</button>
       </form>
     </article>
   </header>

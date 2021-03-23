@@ -19,11 +19,22 @@
   width: 100%;
 }
 
-.feedback-form__list {
+.feedback-form ul {
   @include reset-list-style;
 }
 
-.feedback-form__list input {
+.feedback-form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feedback-form input {
   width: 100%;
   min-height: 48px;
   margin-bottom: 20px;
@@ -34,7 +45,7 @@
   border-radius: 5px;
 }
 
-.feedback-form__list input::placeholder {
+.feedback-form input::placeholder {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
@@ -42,7 +53,7 @@
   opacity: 0.5;
 }
 
-.feedback-form__button {
+.feedback-form button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +73,7 @@
 
 /*стили для FireFox*/
 @supports (-moz-appearance:meterbar) {
-  .feedback-form__list input {
+  .feedback-form input {
     padding-left: 30px;
     padding-top: 14px;
   }
@@ -82,13 +93,13 @@
     color: $font-black-color;
   }
 
-  .feedback-form__list input {
+  .feedback-form input {
     padding-left: 20px;
     padding-top: 4px;
   }
   /*стили для FireFox*/
   @supports (-moz-appearance:meterbar) {
-    .feedback-form__list input {
+    .feedback-form input {
       padding-left: 21px;
       padding-top: 11px;
     }
@@ -109,23 +120,23 @@
     margin-bottom: 20px;
   }
 
-  .feedback-form__list input {
+  .feedback-form input {
     padding-left: 23px;
     padding-top: 4px;
   }
 
-  .feedback-form__button {
+  .feedback-form button {
     padding-bottom: 7px;
     padding-left: 0;
   }
   /*стили для FireFox*/
   @supports (-moz-appearance:meterbar) {
-    .feedback-form__list input {
+    .feedback-form input {
       padding-top: 11px;
       padding-left: 25px;
     }
 
-    .feedback-form__button {
+    .feedback-form button {
       padding-left: 6px;
       letter-spacing: -0.2px;
     }
