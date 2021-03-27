@@ -10,8 +10,8 @@
   background-color: #202020;
   background-image: url("../img/bicycle-selection-background@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 0% 0%;
-  background-size: 101%;
+  background-position: calc(50% + 8px) 0%;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bicycle-selection-background@2x.jpg");
@@ -29,11 +29,17 @@
 
 .page-header__site-menu {
   @include reset-list-style;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 21% 33.5% 23% 22.5%;
+  grid-column-gap: 0;
+  grid-row-gap: 30px;
   padding: 13px 2.3%;
   padding-top: 26px;
   padding-right: 2.8%;
+}
+
+.page-header__site-menu-item:nth-child(4n) {
+  text-align: right;
 }
 
 .page-header__site-menu-item a {
@@ -93,32 +99,32 @@
   }
 
   .page-header__main-nav {
-    position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 5;
     grid-column: 1;
-    width: 100%;
     border-bottom: none;
-    background-color: #ffffff;
   }
 
   .page-header__site-menu {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    width: 100vw;
+    height: 100vh;
     margin-bottom: 110px;
     padding: 0;
+    padding-top: 100px;
     font-weight: normal;
     font-size: 20px;
-    line-height: 140%;
+    line-height: 30px;
     color: $font-mobile-menu;
+    background-color: #ffffff;
   }
 
   .page-header__site-menu-item {
     position: relative;
     display: flex;
-    margin-bottom: 28px;
     background-color: $background-mobile-menu-item;
 
     &::after {
@@ -137,10 +143,9 @@
   }
 
   .page-header__site-menu-item a {
-    padding: 17px;
+    padding: 20px 17px;
     font-weight: normal;
     font-size: 20px;
-    line-height: 140%;
     opacity: 1;
   }
 
@@ -148,9 +153,13 @@
     display: none;
   }
 
+  .page-header__main-nav--closed.page-header__main-nav {
+    background-color: transparent;
+  }
+
   .page-header__main-nav-toggle {
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 50px;
     height: 50px;
     top: 0;
@@ -166,6 +175,7 @@
   }
 
   .page-header__main-nav--closed .page-header__main-nav-toggle {
+    position: absolute;
     background-color: $accent-main-color;
     background-image: url("../img/icon-hamburger.svg");
     background-repeat: no-repeat, no-repeat;
@@ -192,8 +202,8 @@
     background-color: #272727;
     background-image: url("../img/bicycle-selection-background@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 0% -50px;
-    background-size: 100%;
+    background-position: 0% 50%;
+    background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bicycle-selection-background@2x.jpg");
@@ -231,9 +241,13 @@
   .page-header__description {
     min-width: 0;
     padding-bottom: 70px;
-    background-repeat: no-repeat, no-repeat;
-    background-position: -117px 37px;
-    background-size: 172%;
+    background-image: url("../img/bicycle-selection-background-mobile@1x.jpg");
+    background-position: 0% 50%;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bicycle-selection-background-mobile@2x.jpg");
+    }
   }
 
   .page-header__description h2 {

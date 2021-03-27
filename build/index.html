@@ -4,12 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description" content="Наш магазин отбирает только самые лучшие велосипеды для продажи">
   <title>Магазин велосипедов</title>
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="../fonts/opensans-300.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="../fonts/opensans-400.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="../fonts/opensans-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="../fonts/opensans-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -58,7 +59,7 @@
     </nav>
     <article class="page-header__description">
       <h2>Мы продаем велосипеды</h2>
-      <a class="page-header__logo">
+      <a href="#" class="page-header__logo">
         <!-- 1х: 68px -->
         <img width="68" height="21" src="img/logo.svg" alt="Логотип интернет-магазина">
       </a>
@@ -71,11 +72,11 @@
         <ul>
           <li>
             <label for="username">Имя</label>
-            <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" pattern="^[a-zA-Z]+$" required="">
+            <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" pattern="^([a-zA-Z\s\-]|[а-яА-Я\s\-])+$" required="">
           </li>
           <li>
             <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="phone" pattern="\+7[0-9]{10}" placeholder="Введите Ваш номер телефона" required="">
+            <input type="tel" id="phone" name="phone" pattern="(\+7|8)+[0-9]{10}" placeholder="Введите Ваш номер телефона" required="">
           </li>
         </ul>
         <button type="submit">Подобрать велосипед мечты</button>
@@ -152,8 +153,6 @@
         <span class="visually-hidden">Play</span>
       </button>
     </article>
-  </main>
-  <footer class="page-footer">
     <section class="contacts" id="contacts">
       <h3>Как нас найти?</h3>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
@@ -164,15 +163,17 @@
         <!-- 1х: 957px; 2x: 1914px -->
         <img width="957" height="530" src="img/map@1x.png" srcset="img/map@2x.png 2x" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
       </picture>
-      <div class="contacts__info">
-        <a href="mailto:puteshestviemechta@gmail.ru">
-          puteshestviemechta@gmail.ru
-        </a>
-        <a href="tel:+749978468446">
-          +7 (499) -784-684-46
-        </a>
-      </div>
     </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__info">
+      <a href="mailto:puteshestviemechta@gmail.ru">
+        puteshestviemechta@gmail.ru
+      </a>
+      <a href="tel:+749978468446">
+        +7 (499) -784-684-46
+      </a>
+    </div>
   </footer>
   <script src="js/main.js"></script>
 </body>

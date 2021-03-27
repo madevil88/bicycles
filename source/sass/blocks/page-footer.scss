@@ -1,0 +1,109 @@
+.page-footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 4;
+}
+
+.page-footer__info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 522px;
+  margin-top: 30px;
+  margin-left: calc(50% - 247px);
+  padding-bottom: 92px;
+}
+
+.page-footer__info a {
+  @include reset-link-style;
+  position: relative;
+  padding-left: 15px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: $font-black-color;
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.page-footer__info a:first-child::before {
+  @include pseudo-clases;
+  width: 50px;
+  height: 22px;
+  top: 6px;
+  left: -27px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 51%;
+}
+
+.page-footer__info a:last-child::before {
+  @include pseudo-clases;
+  width: 46px;
+  height: 27px;
+  top: 2px;
+  left: -22px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 50%;
+}
+
+@media (max-width: $tablet-max-width) {
+  .page-footer__info {
+    width: 537px;
+    margin: 0 calc(50% - 268px);
+    margin-top: 14px;
+    padding-bottom: 50px;
+  }
+
+  .page-footer__info a {
+    padding-left: 30px;
+  }
+
+  .page-footer__info a:first-child::before {
+    left: -10px;
+  }
+
+  .page-footer__info a:last-child::before {
+    left: -7px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .page-footer__info {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 calc(50% - 140px);
+    margin-top: 21px;
+    padding-bottom: 47px;
+  }
+
+  .page-footer__info a {
+    padding-left: 47px;
+  }
+
+  .page-footer__info a:first-child::before {
+    left: 7px;
+  }
+
+  .page-footer__info a:last-child {
+    margin-top: 14px;
+    padding-left: 22px;
+  }
+
+  .page-footer__info a:last-child::before {
+    left: -15px;
+  }
+}

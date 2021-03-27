@@ -40,15 +40,22 @@
   margin-bottom: 20px;
   padding-left: 27px;
   padding-top: 8px;
+  padding-bottom: 0;
+  line-height: 1;
   letter-spacing: 0.3px;
   border: 1px solid #c9ccd4;
   border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: #c9ccd4;
+  }
 }
 
 .feedback-form input::placeholder {
   font-weight: normal;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 15px;
   color: $font-placeholder-color;
   opacity: 0.5;
 }
@@ -64,6 +71,7 @@
   line-height: 21px;
   background-color: $accent-main-color;
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -75,7 +83,7 @@
 @supports (-moz-appearance:meterbar) {
   .feedback-form input {
     padding-left: 30px;
-    padding-top: 14px;
+    padding-top: 18px;
   }
 }
 /*конец стилей для FireFox*/
@@ -101,7 +109,7 @@
   @supports (-moz-appearance:meterbar) {
     .feedback-form input {
       padding-left: 21px;
-      padding-top: 11px;
+      padding-top: 15px;
     }
   }
   /*конец стилей для FireFox*/
@@ -132,8 +140,8 @@
   /*стили для FireFox*/
   @supports (-moz-appearance:meterbar) {
     .feedback-form input {
-      padding-top: 11px;
-      padding-left: 25px;
+      padding-top: 15px;
+      padding-left: 26px;
     }
 
     .feedback-form button {
