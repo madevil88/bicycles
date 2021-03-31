@@ -1,5 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
+  display: grid;
+  grid-template-rows: 1fr auto;
   min-width: 320px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 

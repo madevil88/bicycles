@@ -1,10 +1,10 @@
 .video-about-bicycles {
   position: relative;
   display: grid;
-  grid-template-columns: 64.5vw;
-  padding: 0 calc(35vw / 2);
+  grid-template-columns: 1fr;
+  padding: 0 calc(50% - 464px);
   color: $font-white;
-  background: linear-gradient(to bottom, #131314 88%, transparent 88%);
+  background: linear-gradient(to bottom, #131314 87%, transparent 87%);
 }
 
 .video-about-bicycles h3 {
@@ -29,7 +29,7 @@
 }
 
 .video-about-bicycles img {
-  width: 65vw;
+  width: 100%;
   margin-top: 55px;
   margin-left: 8px;
 }
@@ -38,8 +38,8 @@
   position: absolute;
   width: 64px;
   height: 64px;
-  bottom: calc(50% - 173px);
-  left: calc(50% - 23px);
+  bottom: calc(50% - 170px);
+  left: calc(50% - 24px);
   background-color: $accent-main-color;
   background-image: url("../img/icon-play-button.svg");
   background-repeat: no-repeat, no-repeat;
@@ -66,32 +66,29 @@
   background-position: 26px 21px;
   background-size: 23%;
 }
-/*стили для FireFox*/
-@supports (-moz-appearance:meterbar) {
-  .video-about-bicycles {
-    padding: 0 calc(35.4vw / 2);
-  }
-}
-/*конец стилей для FireFox*/
 
 @media (max-width: $tablet-max-width) {
   .video-about-bicycles {
+    padding: 0 calc(50% - 370px);
     background: linear-gradient(to bottom, #131314 82.5%, transparent 82.5%);
   }
 
   .video-about-bicycles h3 {
     width: 297px;
     margin-top: 70px;
+    padding-left: 8px;
     font-size: 24px;
   }
 
   .video-about-bicycles p {
     width: 450px;
+    padding-left: 5px;
   }
 
   .video-about-bicycles img {
+    width: 67%;
     margin-top: 43px;
-    margin-left: 5px;
+    margin-left: calc(50% - 247px);
   }
 
   .video-about-bicycles__button {
@@ -109,18 +106,11 @@
     background-position: 38px 31px;
   }
 }
-/*стили для FireFox*/
-@supports (-moz-appearance:meterbar) {
-  .video-about-bicycles {
-    padding: 0 calc(34.4vw / 2);
-  }
-}
-/*конец стилей для FireFox*/
 
 @media (max-width: $mobile-max-width) {
   .video-about-bicycles {
-    grid-template-columns: 90.4vw;
-    padding: 0 calc(6.4vw / 2);
+    padding: 0;
+    grid-template-columns: 1fr;
     background: linear-gradient(to bottom, #131314 88%, transparent 88%);
   }
 
@@ -128,6 +118,7 @@
     width: 288px;
     margin-top: 83px;
     padding-left: 0;
+    letter-spacing: -0.2px;
   }
 
   .video-about-bicycles p {
@@ -136,14 +127,15 @@
   }
 
   .video-about-bicycles img {
-    width: 89.4vw;
+    width: 288px;
+    margin: 0 calc(50% - 145px);
     margin-top: 52px;
   }
 
   .video-about-bicycles__button {
     width: 65px;
     height: 65px;
-    bottom: calc(50% - 168px);
+    bottom: calc(50% - 164px);
     left: calc(50% - 34px);
     background-position: 26px 21px;
   }

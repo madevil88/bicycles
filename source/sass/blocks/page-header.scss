@@ -4,7 +4,7 @@
   grid-column-gap: 11vw;
   grid-row-gap: 249px;
   min-width: 720px;
-  padding-left: calc(48% - 402px);
+  padding-left: calc(48% - 401px);
   padding-bottom: 220px;
   color: $font-white;
   background-color: #202020;
@@ -104,6 +104,7 @@
     z-index: 5;
     grid-column: 1;
     border-bottom: none;
+    background-color: red;
   }
 
   .page-header__site-menu {
@@ -120,6 +121,14 @@
     line-height: 30px;
     color: $font-mobile-menu;
     background-color: #ffffff;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .page-header__site-menu::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
   }
 
   .page-header__site-menu-item {
@@ -261,5 +270,10 @@
 
   .page-header__logo {
     margin-left: 16px;
+  }
+
+  .page-header__site-menu {
+    width: 100vw;
+    height: 100vh;
   }
 }
