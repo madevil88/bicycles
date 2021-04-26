@@ -32,7 +32,7 @@
   }
 }
 
-.page-footer__info a:first-child::before {
+.page-footer__info a[data-name="email"]::before {
   @include pseudo-clases;
   width: 50px;
   height: 22px;
@@ -44,7 +44,7 @@
   background-size: 51%;
 }
 
-.page-footer__info a:first-child + a::before {
+.page-footer__info a[data-name="phone"]::before {
   @include pseudo-clases;
   width: 46px;
   height: 27px;
